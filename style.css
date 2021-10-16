@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+/*======= 
+typography
+===============*/
+.app-title {
+  text-align: center;
+}
+/*===============
+cards
+=================*/
+.card-container {
+  background: chartreuse;
+  max-width: 350px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.btn-card {
+  display: flex;
+}
+
+.btn-card-other,
+.btn-card-link {
+  background: magenta;
+  margin: 1em;
+  padding: 2em;
+  cursor: pointer;
+}
+
+.btn-card-link {
+  width: 50%;
+  color: #fff;
+}
+
+.actual-links {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-card-other {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.btn-card-link-other {
+  color: #fff;
+  text-decoration: none;
+}
