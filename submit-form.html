@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VHax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card-container form-container">
+        <header>
+            <button aria-label="Open Navigation" class="open-nav">&#9776;</button>
+
+            <nav class="nav">
+                <button aria-label="Close Navigation" class="close-nav">&times;</button>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="profile.html" class="nav-link">home</a></li>
+                    <li class="nav-item"><a href="work.html" class="nav-link">Submit Work</a></li>
+                    <li class="nav-item"><a href="leaderboard.html" class="nav-link">Leaderboard</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="app-title"> Submit Your Work</h1>
+
+        <div class="description-box">
+            <p class="work-desc">Below you can drop all the amazing work you've done</p>
+            <form action="./congrats.html">
+                <label for="description">Describe what you did:</label>
+
+                <textarea id="description" name="description" rows="5" cols="33">
+
+                </textarea>
+                <br>
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img" accept="image/*" class="btn-input-img">
+                <br>
+                <br>
+                <button type="submit" class="login-btn inst-btn accented-btn"
+                    onclick="location.href = './profile.html';">Submit</button>
+            </form>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

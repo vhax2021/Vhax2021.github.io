@@ -5,24 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <title>VHax</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="card-container">
-        <h1 class="app-title"> Social Gains</h1>
-        <div class="btn-card">
-            <div class="btn-card-link"><a href="#" class="actual-links">Mentoring</a></div>
-            <div class="btn-card-link"><a href="#" class="actual-links">Counselling</a></div>
+    <div class="card-container login-container">
+        <div class="lg-page-container">
+            <div class="logo-container">
+                <img src="./imgs/logo (2).png" alt="" class="logo">
+            </div>
+            <input type="text" placeholder="Phone number, username, or email">
+            <input type="password" name="" id="" class="input-btm">
+            <button type="submit" class="login-btn inst-btn" onclick="location.href = './profile.html';">Log in</button>
+
+
+            <button class="login-btn fb-login">
+                <span class="fb-logo"><img src="./img/fb-icon.svg" alt="" class="fb-logo-img"></span>
+                <span class="fb-lg-p">Log in with Facebook</span>
+            </button>
+
+            <button class="login-btn f-pw">
+                Forgot password?
+            </button>
+
+            <div class="sign-up">
+                <p class="q-acc">Don't have an account?</p>
+                <a href="#" class="sign-up-link">Sign up</a>
+            </div>
         </div>
-        <div class="btn-card">
-            <div class="btn-card-link"><a href="#" class="actual-links">Stewarding</a></div>
-            <div class="btn-card-link"><a href="#" class="actual-links">Cleaning</a></div>
-        </div>
-        <div class="btn-card-other">
-            <a href="" class="btn-card-link-other">Other</a>
-        </div>
+
+    </div>
+
     </div>
 </body>
 

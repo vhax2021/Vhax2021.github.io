@@ -8,6 +8,82 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/*====================
+navigation
+=======================*/
+header {
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav {
+  position: fixed;
+  background: yellow;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 100%;
+  transform: translateX(0);
+  transition: transform 250ms;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.navigation-open {
+  transform: translateX(-100%);
+}
+
+.nav-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: green;
+}
+
+.close-nav {
+  border: 0;
+  background: 0;
+  color: #000;
+  font-weight: 700;
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 0.5em;
+  position: absolute;
+}
+
+.open-nav {
+  border: 0;
+  background: 0;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin-left: auto;
+}
+
+button:hover,
+button:focus {
+  transition: 256ms;
+  transform: scale(1.03);
 }
 
 /*======= 
@@ -19,9 +95,10 @@ typography
 /*===============
 cards
 =================*/
-.card-container {
-  background: chartreuse;
-  max-width: 350px;
+.card-container,
+.container {
+  background: yellow;
+  max-width: 400px;
   margin: 0 auto;
   height: 100vh;
 }
@@ -32,20 +109,27 @@ cards
 
 .btn-card-other,
 .btn-card-link {
-  background: magenta;
+  background: yellow;
   margin: 1em;
   padding: 2em;
   cursor: pointer;
 }
 
 .btn-card-link {
-  width: 50%;
+  padding: 2em;
+  text-align: center;
+  width: 100%;
   color: #fff;
 }
 
+.btn-card-link-other,
+.actual-links,
 .actual-links {
+  font-family: inherit;
+  font-weight: 900;
+  margin-top: 1em;
+  color: #000;
   text-decoration: none;
-  color: #fff;
 }
 
 .btn-card-other {
@@ -53,7 +137,205 @@ cards
   margin-bottom: 2em;
 }
 
-.btn-card-link-other {
+/*=============
+profile
+=================*/
+.profile-container {
+  background: black;
+  color: white;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px yellow solid;
+  padding: 1em 1.5em;
+}
+.profile-user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.profile-img-circle {
+  display: inline-block;
+  width: 7em;
+  height: 7em;
+  overflow: hidden;
+  border-radius: 100%;
+  margin-bottom: 1em;
+}
+
+.profile-header-img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
+}
+
+.stats-list {
+  display: flex;
+  text-align: center;
+  padding-left: 0;
+}
+
+.stats {
+  list-style: none;
+  display: flex;
+  margin: 0.5em;
+  flex-direction: column;
+}
+
+.profile-names {
+  color: yellow;
+  font-weight: 900;
+}
+.profile-biography {
+  text-align: center;
+  border-bottom: 2px solid yellow;
+}
+
+.profile-showcase {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+.pf-sc-img {
+  width: 9em;
+  height: 9em;
+  object-fit: cover;
+  object-position: center;
+}
+
+/*====================
+loginpage
+====================*/
+.login-container,
+.lg-page-container {
+  padding: 2em;
+}
+
+/*typography*/
+
+/*input feild*/
+input {
+  width: 100%;
+  padding: 0.5em 1em;
+  border: 1px #e8e8e8 solid;
+  border-radius: 3px;
+}
+.input-btm {
+  margin: 0.5em 0 1em 0;
+}
+/*buttons*/
+button {
+  cursor: pointer;
+}
+
+.login-btn {
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.inst-btn {
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  background: #000;
   color: #fff;
+}
+
+.inst-btn:focus,
+.inst-btn:hover {
+  background: blue;
+}
+
+.sign-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-link {
   text-decoration: none;
+  color: blue;
+  margin-left: 0.5em;
+  font-weight: 700;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
+
+.lg-page-container {
+  background: white;
+}
+
+.form-container {
+  background: #000;
+  color: #fff;
+}
+
+/*============ 
+Form work submission
+===================== */
+.description-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 2em;
+}
+
+#description {
+  width: 100%;
+  height: 9em;
+  margin-bottom: 1.5em;
+}
+
+.accented-btn {
+  background: yellow;
+}
+
+input[type="file"] {
+  margin: 1em 0;
+  border: none;
+  width: 100%;
+  background: yellow;
+}
+input[type="file"]::file-selector-button {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding: 0.5em 1.2em;
+  background: yellow;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.btn-form-submit {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  padding: 0.5em 1.2em;
+}
+
+.accented-btn {
+  font-family: inherit;
+  font-weight: 700;
+  color: #000;
+  background: yellow;
+}
+
+.accented-btn:hover,
+.accented:focus {
+  color: white;
 }
